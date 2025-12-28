@@ -6,7 +6,6 @@ A full-stack application for analyzing SIF API data consistency, with a Node.js/
 
 This repository is published publicly for **transparency, technical review, and evaluation**.
 
-It is **not an open-source license grant**.  
 No rights are granted for commercial use, redistribution, or deployment without a separate written agreement from the author.
 
 This codebase is actively developed and may change without notice.
