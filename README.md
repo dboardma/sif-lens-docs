@@ -182,8 +182,7 @@ The client will start on `http://localhost:5173`
 1. Open the frontend at `http://localhost:5173`
 2. Select the solution (Production or UAT) from the dropdown
 3. Enter zone IDs in the text area:
-   - Full format: `p-12345-me` or `u-12345-me`
-   - SAUID only: `12345` (will be auto-converted based on solution)
+   - Full format: `zone1Id` or `zone2Id`
    - Comma-separated for multiple zones
 4. (Optional) Check "Keep previous scan history" to preserve historical data
    - **Default**: Previous scans for each zone are deleted
@@ -204,12 +203,12 @@ The client will start on `http://localhost:5173`
 # Previous scans for a zone-recordtype deleted
 curl -X POST http://localhost:3001/api/scan \
   -H "Content-Type: application/json" \
-  -d '{"zoneIds": ["p-12345-me", "p-67890-me"], "solution": "prod"}'
+  -d '{"zoneIds": ["zone1Id", "zone2Id"], "solution": "prod"}'
 ```
 
 **Get Results:**
 ```bash
-curl http://localhost:3001/api/results/zone1
+curl http://localhost:3001/api/results/zone1Id
 ```
 
 **Health Check:**
