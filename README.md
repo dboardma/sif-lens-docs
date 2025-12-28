@@ -3,6 +3,32 @@
 # SIF Lens - Full-Stack TypeScript Application
 
 A full-stack application for analyzing SIF API data consistency, with a Node.js/Express backend and React frontend.
+## Security at a Glance
+
+SIF Lens is designed to analyze **schema structure and API behavior**, not to store or warehouse student data.
+
+**Key security and privacy characteristics:**
+
+- **No student records persisted**  
+  Full SIF records are processed in memory only. The database stores schema metadata (field names, hierarchy, counts), not complete records.
+
+- **Identifier-only provenance (no data sampling)**  
+  The application does not store example data values.  
+  It records only limited **RefIds** (record identifiers) to indicate which records
+  contained or did not contain specific fields during a scan.  
+  RefIds are identifiers only and do not include record content or PII.
+
+- **Credentials do not need to be stored**  
+  API credentials can be provided at runtime and used only for the duration of a scan. Scans can be executed without persisting credentials.
+
+- **Read-only API access**  
+  All interactions with SIF endpoints are read-only and explicitly initiated by the user.
+
+- **Strong tenant isolation and access controls**  
+  The application enforces organization-level isolation, role-based access control, and permission checks on every protected operation.
+
+- **Auditability built into access and usage**  
+  User authentication, role-based authorization, legal acceptance, and scan activity are recorded and enforced consistently, providing auditable records of system access and use.
 
 ## Repository Status and Licensing
 
