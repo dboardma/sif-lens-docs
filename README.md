@@ -1,3 +1,5 @@
+![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue)
+![License](https://img.shields.io/badge/License-Proprietary-red)
 # SIF Lens - Full-Stack TypeScript Application
 
 A full-stack application for analyzing SIF API data consistency, with a Node.js/Express backend and React frontend.
